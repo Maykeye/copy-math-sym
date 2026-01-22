@@ -28,7 +28,7 @@ def categories():
     return {
         "letters": lambda: get_unicode_range(range(0x2100, 0x214F)),
         "numbers": lambda: get_unicode_range(range(0x2150, 0x218F)),
-        "operators": lambda: get_unicode_range(range(0x2200, 0x22FF)),
+        "operators": lambda: get_unicode_range([range(0x2200, 0x22FF), range(0xac, 0xad)]),
         "arrows": lambda: get_unicode_range(
             range(0x2190, 0x21FF), remove=["wards", "Arrow ", "Arrow"]
         ),
